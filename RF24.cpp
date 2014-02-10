@@ -33,7 +33,7 @@ void RF24::ce(int level)
   digitalWrite(ce_pin,level);
   // Minimum CE high is 10μs (datasheet 6.1.7)
   if (level == HIGH)
-    delayMicroseconds(10);
+    delayMicroseconds(15);
 }
 
 /****************************************************************************/
@@ -520,7 +520,6 @@ void RF24::startWrite( const void* buf, uint8_t len )
 
   // Allons!
   ce(HIGH);
-  delayMicroseconds(15);
   ce(LOW);
 }
 
