@@ -31,7 +31,7 @@ void RF24::csn(int mode)
 void RF24::ce(int level)
 {
   digitalWrite(ce_pin,level);
-  // Minimum CE high is 10μs (datasheed 6.1.7)
+  // Minimum CE high is 10μs (datasheet 6.1.7)
   if (level == HIGH)
     delayMicroseconds(10);
 }
